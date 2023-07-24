@@ -55,12 +55,12 @@
                         let p = document.createElement("p");
                         p.innerText = text;
                         textr = p.innerHTML;
-                        for (let chave of chaves) {
-                            for (let word of chave.words) {
-                                textr = textr.replaceAll(word, `<a style='color:` + chave.color + `;'>` + word + `</a>`);
-                            }
-                        }
-                        textr = textr.replaceAll("	", "<a>	</a>");
+                        // for (let chave of chaves) {
+                        //     for (let word of chave.words) {
+                        //         textr = textr.replaceAll(word, `<a style='color:` + chave.color + `;'>` + word + `</a>`);
+                        //     }
+                        // }
+                        // textr = textr.replaceAll("	", "<a>	</a>");
                         div.innerHTML = textr;
                     }
                     setTimeout(() => {
