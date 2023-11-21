@@ -115,11 +115,10 @@
             textarea.onkeydown = (e) => {
                 if (e.key == "Tab") {
                     e.preventDefault();
-                    var start = this.selectionStart;
-                    var end = this.selectionEnd;
-                    this.value = this.value.substring(0, start) + "\t" + this.value.substring(end);
-                    this.selectionStart =
-                        this.selectionEnd = start + 1;
+                    var start = e.target.selectionStart;
+                    var end = e.target.selectionEnd;
+                    e.target.value = e.target.value.substring(0, start) + "\t" + e.target.value.substring(end);
+                    e.target.selectionStart = e.target.selectionEnd = start + 1;
                 }
             };
         }
